@@ -4068,7 +4068,7 @@ vertical-align: -.125em;
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">February 2, 2026</p>
+      <p class="date-modified">February 3, 2026</p>
     </div>
   </div>
     
@@ -4079,6 +4079,24 @@ vertical-align: -.125em;
 </header>
 
 
+<script>(function () {
+  const PASSWORD = atob("NWRlbWF5bw==");
+  /* const KEY = "auth_" + location.pathname; */
+  const KEY = "auth_ok"
+
+  if (sessionStorage.getItem(KEY) === "true") return;
+
+  const user = prompt("Introduce la contraseña:");
+
+  if (user !== PASSWORD) {
+    document.documentElement.innerHTML = "<h2>Acceso denegado</h2>";
+    throw new Error("Unauthorized");
+  }
+
+  sessionStorage.setItem(KEY, "true");
+  /* localStorage.setItem(KEY, "true"); */
+})();
+</script>
 <button id="scroll-top" onclick="window.scrollTo({top: 0, behavior: &#39;smooth&#39;});">
 ↑ Inicio
 </button>
@@ -4193,7 +4211,7 @@ vertical-align: -.125em;
 <span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>                                                             <span class="st">&quot;Después del contacto con el entorno del paciente&quot;</span>,</span>
 <span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>                                                             <span class="st">&quot;Después del contacto con el paciente&quot;</span>,</span>
 <span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>                                                             <span class="st">&quot;Después del riesgo de exposición a fluidos&quot;</span>),</span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>                                               <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&quot;M1&quot;</span>, <span class="st">&quot;M2&quot;</span>, <span class="st">&quot;M3&quot;</span>, <span class="st">&quot;M4&quot;</span>, <span class="st">&quot;M5&quot;</span>),</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>                                               <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&quot;M2&quot;</span>, <span class="st">&quot;M1&quot;</span>, <span class="st">&quot;M5&quot;</span>, <span class="st">&quot;M4&quot;</span>, <span class="st">&quot;M3&quot;</span>),</span>
 <span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>                                               <span class="at">ordered =</span> <span class="cn">FALSE</span>))) <span class="co"># Puse TRUE pero creo que es FALSE</span></span>
 <span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>data[var] <span class="sc">|&gt;</span> <span class="fu">select</span>(<span class="fu">where</span>(is.character)) <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">where</span>(is.character), factor)) <span class="sc">|&gt;</span> <span class="fu">summary</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -4217,7 +4235,7 @@ vertical-align: -.125em;
  $ curso     : Ord.factor w/ 3 levels &quot;4º (pre-formación)&quot;&lt;..: 1 1 1 1 1 1 1 1 1 1 ...
  $ escenario : Factor w/ 3 levels &quot;Box&quot;,&quot;Consulta&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...
  $ situacion : Factor w/ 2 levels &quot;Entrada&quot;,&quot;Punto de atención&quot;: 2 2 2 2 2 2 2 2 2 2 ...
- $ indicacion: Factor w/ 5 levels &quot;M1&quot;,&quot;M2&quot;,&quot;M3&quot;,..: 2 4 2 4 2 4 2 4 2 4 ...
+ $ indicacion: Factor w/ 5 levels &quot;M2&quot;,&quot;M1&quot;,&quot;M5&quot;,..: 2 4 2 4 2 4 2 4 2 4 ...
  $ accion    : Factor w/ 3 levels &quot;Agua + Jabón&quot;,..: 2 2 2 2 2 2 2 2 2 2 ...
  $ guantes   : Factor w/ 2 levels &quot;NO&quot;,&quot;SI&quot;: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
 </div>
